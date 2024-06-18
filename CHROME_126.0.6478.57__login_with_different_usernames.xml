@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="login_with_different_usernames"
+    errors="0" failures="1" hostname="" id="" package="login_with_different_usernames" skipped="1"
+    tests="1" time="14.88" timestamp="">
+  
+    <testcase name="Login with standard user" classname="login_with_different_usernames" time="7.439" assertions="3">
+
+    
+
+      <failure message="Testing if element &lt;.title&gt; contains text &#39;Products&#39; in 5000ms - expected &#34;contains text &#39;Products&#39;&#34; but got: &#34;element could not be located&#34; (5284ms)">    at Login with standard user (C:\Users\snegajbh\Desktop\last\test-analysis-service\tests\login_with_different_usernames.js:10:17)</failure>
+
+    
+    </testcase>
+  
+
+  
+    <system-err>
+       NoSuchElementError
+   An error occurred while running .click() command on &lt;button.shopping_cart_link&gt;: Timed out while waiting for element &#34;button.shopping_cart_link&#34; with &#34;css selector&#34; to be present for 5000 milliseconds.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+
+    Error location:
+    C:\Users\snegajbh\Desktop\last\test-analysis-service\tests\Checkout process.js:12
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     10 |         .click(&#39;button.btn_primary.btn_inventory&#39;)
+     11 |         .pause(1000) // Adjust as necessary
+     12 |         .click(&#39;button.shopping_cart_link&#39;) 
+     13 |         .pause(1000) // Adjust as necessary
+     14 |         .click(&#39;button.btn_action.checkout_button&#39;)
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+ NoSuchElementError
+   An error occurred while running .click() command on &lt;button.btn_action.checkout_button&gt;: Timed out while waiting for element &#34;button.btn_action.checkout_button&#34; with &#34;css selector&#34; to be present for 5000 milliseconds.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+
+    Error location:
+    C:\Users\snegajbh\Desktop\last\test-analysis-service\tests\Checkout process.js:14
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     12 |         .click(&#39;button.shopping_cart_link&#39;)
+     13 |         .pause(1000) // Adjust as necessary
+     14 |         .click(&#39;button.btn_action.checkout_button&#39;) 
+     15 |         .waitForElementVisible(&#39;.checkout_info&#39;, 5000)
+     16 |         .assert.containsText(&#39;.summary_info .summary_total_label&#39;, &#39;Total&#39;)
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+ NoSuchElementError
+   An error occurred while running .click() command on &lt;select.product_sort_container option[value=&#34;price_asc&#34;]&gt;: Timed out while waiting for element &#34;select.product_sort_container option[value=&#34;price_asc&#34;]&#34; with &#34;css selector&#34; to be present for 5000 milliseconds.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+
+    Error location:
+    C:\Users\snegajbh\Desktop\last\test-analysis-service\tests\Testing product sorting and filtering.js:10
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     8 |         .click(&#39;#login-button&#39;)
+     9 |         .waitForElementVisible(&#39;.inventory_list&#39;, 5000)
+     10 |         .click(&#39;select.product_sort_container option[value=&#34;price_asc&#34;]&#39;) 
+     11 |         .pause(1000) // Adjust as necessary
+     12 |         .getText(&#39;.inventory_item_price&#39;, function (result) {
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+    </system-err>
+  
+
+    
+
+  
+    
+    <testcase
+      name="Login with locked out user" classname="login_with_different_usernames">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

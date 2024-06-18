@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="1"
+            tests="1">
+
+  <testsuite name="Testing product sorting and filtering"
+    errors="1" failures="1" hostname="" id="" package="Testing product sorting and filtering" skipped="1"
+    tests="1" time="15.65" timestamp="">
+  
+    <testcase name="Sort products by price (low to high)" classname="Testing product sorting and filtering" time="7.826" assertions="3">
+
+    
+
+      <failure message="Error while running &#34;getText&#34; command: [TypeError] result.value.map is not a function">TypeError: Error while running &#34;getText&#34; command: [TypeError] result.value.map is not a function
+    at NightwatchAPI.&lt;anonymous&gt; (C:\Users\snegajbh\Desktop\last\test-analysis-service\tests\Testing product sorting and filtering.js:14:37)</failure>
+
+    
+    <error message="Error while running &#34;getText&#34; command: [TypeError] result.value.map is not a function" type="error"><![CDATA[
+    TypeError: Error while running &#34;getText&#34; command: [TypeError] result.value.map is not a function
+    at NightwatchAPI.&lt;anonymous&gt; (C:\Users\snegajbh\Desktop\last\test-analysis-service\tests\Testing product sorting and filtering.js:14:37)
+    at Object.apply (C:\Users\snegajbh\Desktop\last\test-analysis-service\node_modules\nightwatch\lib\api\_loaders\_base-loader.js:411:29)
+    at GetText.complete (C:\Users\snegajbh\Desktop\last\test-analysis-service\node_modules\nightwatch\lib\element\command.js:240:27)
+    at successHandler (C:\Users\snegajbh\Desktop\last\test-analysis-service\node_modules\nightwatch\lib\api\element-commands\_baseElementCommand.js:66:45)
+    at PeriodicPromise.perform (C:\Users\snegajbh\Desktop\last\test-analysis-service\node_modules\nightwatch\lib\utils\periodic-promise.js:108:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PeriodicPromise.runAction (C:\Users\snegajbh\Desktop\last\test-analysis-service\node_modules\nightwatch\lib\utils\periodic-promise.js:48:22)
+    at async PeriodicPromise.runAction (C:\Users\snegajbh\Desktop\last\test-analysis-service\node_modules\nightwatch\lib\utils\periodic-promise.js:51:16)
+    ]]></error>
+    
+    </testcase>
+  
+
+  
+    <system-err>
+       NoSuchElementError
+   An error occurred while running .click() command on &lt;button.shopping_cart_link&gt;: Timed out while waiting for element &#34;button.shopping_cart_link&#34; with &#34;css selector&#34; to be present for 5000 milliseconds.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+
+    Error location:
+    C:\Users\snegajbh\Desktop\last\test-analysis-service\tests\Checkout process.js:12
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     10 |         .click(&#39;button.btn_primary.btn_inventory&#39;)
+     11 |         .pause(1000) // Adjust as necessary
+     12 |         .click(&#39;button.shopping_cart_link&#39;) 
+     13 |         .pause(1000) // Adjust as necessary
+     14 |         .click(&#39;button.btn_action.checkout_button&#39;)
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+ NoSuchElementError
+   An error occurred while running .click() command on &lt;button.btn_action.checkout_button&gt;: Timed out while waiting for element &#34;button.btn_action.checkout_button&#34; with &#34;css selector&#34; to be present for 5000 milliseconds.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+
+    Error location:
+    C:\Users\snegajbh\Desktop\last\test-analysis-service\tests\Checkout process.js:14
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     12 |         .click(&#39;button.shopping_cart_link&#39;)
+     13 |         .pause(1000) // Adjust as necessary
+     14 |         .click(&#39;button.btn_action.checkout_button&#39;) 
+     15 |         .waitForElementVisible(&#39;.checkout_info&#39;, 5000)
+     16 |         .assert.containsText(&#39;.summary_info .summary_total_label&#39;, &#39;Total&#39;)
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+ NoSuchElementError
+   An error occurred while running .click() command on &lt;select.product_sort_container option[value=&#34;price_asc&#34;]&gt;: Timed out while waiting for element &#34;select.product_sort_container option[value=&#34;price_asc&#34;]&#34; with &#34;css selector&#34; to be present for 5000 milliseconds.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+
+    Error location:
+    C:\Users\snegajbh\Desktop\last\test-analysis-service\tests\Testing product sorting and filtering.js:10
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     8 |         .click(&#39;#login-button&#39;)
+     9 |         .waitForElementVisible(&#39;.inventory_list&#39;, 5000)
+     10 |         .click(&#39;select.product_sort_container option[value=&#34;price_asc&#34;]&#39;) 
+     11 |         .pause(1000) // Adjust as necessary
+     12 |         .getText(&#39;.inventory_item_price&#39;, function (result) {
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+    </system-err>
+  
+
+    
+
+  
+    
+    <testcase
+      name="Filter products by category" classname="Testing product sorting and filtering">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

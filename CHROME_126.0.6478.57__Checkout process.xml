@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="2"
+            failures="1"
+            tests="1">
+
+  <testsuite name="Checkout process"
+    errors="2" failures="1" hostname="" id="" package="Checkout process" skipped="0"
+    tests="1" time="39.76" timestamp="">
+  
+    <testcase name="Add products to cart and proceed to checkout" classname="Checkout process" time="19.85" assertions="3">
+
+    
+
+      <failure message="Timed out while waiting for element &lt;.checkout_info&gt; to be present for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (5248ms)">    at Add products to cart and proceed to checkout (C:\Users\snegajbh\Desktop\last\test-analysis-service\tests\Checkout process.js:15:10)</failure>
+
+    
+    <error message="Timed out while waiting for element &lt;.checkout_info&gt; to be present for 5000 milliseconds. - expected [32m&#34;visible&#34;[39m but got: [31m&#34;not found&#34;[39m [90m(5248ms)[39m" type="error"><![CDATA[
+    Error
+    at Add products to cart and proceed to checkout (C:\Users\snegajbh\Desktop\last\test-analysis-service\tests\Checkout process.js:15:10)
+    at Context.call (C:\Users\snegajbh\Desktop\last\test-analysis-service\node_modules\nightwatch\lib\testsuite\context.js:515:35)
+    at TestCase.run (C:\Users\snegajbh\Desktop\last\test-analysis-service\node_modules\nightwatch\lib\testsuite\testcase.js:58:31)
+    at Runnable.__runFn (C:\Users\snegajbh\Desktop\last\test-analysis-service\node_modules\nightwatch\lib\testsuite\index.js:839:80)
+    at Runnable.run (C:\Users\snegajbh\Desktop\last\test-analysis-service\node_modules\nightwatch\lib\testsuite\runnable.js:126:21)
+    at TestSuite.executeRunnable (C:\Users\snegajbh\Desktop\last\test-analysis-service\node_modules\nightwatch\lib\testsuite\index.js:1000:49)
+    at TestSuite.handleRunnable (C:\Users\snegajbh\Desktop\last\test-analysis-service\node_modules\nightwatch\lib\testsuite\index.js:1015:33)
+    at C:\Users\snegajbh\Desktop\last\test-analysis-service\node_modules\nightwatch\lib\testsuite\index.js:839:21
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async DefaultRunner.runTestSuite (C:\Users\snegajbh\Desktop\last\test-analysis-service\node_modules\nightwatch\lib\runner\test-runners\default.js:83:7)
+    ]]></error>
+    
+    </testcase>
+  
+
+  
+    <system-err>
+       NoSuchElementError
+   An error occurred while running .click() command on &lt;button.shopping_cart_link&gt;: Timed out while waiting for element &#34;button.shopping_cart_link&#34; with &#34;css selector&#34; to be present for 5000 milliseconds.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+
+    Error location:
+    C:\Users\snegajbh\Desktop\last\test-analysis-service\tests\Checkout process.js:12
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     10 |         .click(&#39;button.btn_primary.btn_inventory&#39;)
+     11 |         .pause(1000) // Adjust as necessary
+     12 |         .click(&#39;button.shopping_cart_link&#39;) 
+     13 |         .pause(1000) // Adjust as necessary
+     14 |         .click(&#39;button.btn_action.checkout_button&#39;)
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+ NoSuchElementError
+   An error occurred while running .click() command on &lt;button.btn_action.checkout_button&gt;: Timed out while waiting for element &#34;button.btn_action.checkout_button&#34; with &#34;css selector&#34; to be present for 5000 milliseconds.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+
+    Error location:
+    C:\Users\snegajbh\Desktop\last\test-analysis-service\tests\Checkout process.js:14
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     12 |         .click(&#39;button.shopping_cart_link&#39;)
+     13 |         .pause(1000) // Adjust as necessary
+     14 |         .click(&#39;button.btn_action.checkout_button&#39;) 
+     15 |         .waitForElementVisible(&#39;.checkout_info&#39;, 5000)
+     16 |         .assert.containsText(&#39;.summary_info .summary_total_label&#39;, &#39;Total&#39;)
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+ NoSuchElementError
+   An error occurred while running .click() command on &lt;select.product_sort_container option[value=&#34;price_asc&#34;]&gt;: Timed out while waiting for element &#34;select.product_sort_container option[value=&#34;price_asc&#34;]&#34; with &#34;css selector&#34; to be present for 5000 milliseconds.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+
+    Error location:
+    C:\Users\snegajbh\Desktop\last\test-analysis-service\tests\Testing product sorting and filtering.js:10
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     8 |         .click(&#39;#login-button&#39;)
+     9 |         .waitForElementVisible(&#39;.inventory_list&#39;, 5000)
+     10 |         .click(&#39;select.product_sort_container option[value=&#34;price_asc&#34;]&#39;) 
+     11 |         .pause(1000) // Adjust as necessary
+     12 |         .getText(&#39;.inventory_item_price&#39;, function (result) {
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+    </system-err>
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>
